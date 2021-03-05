@@ -1,0 +1,299 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
+	<meta name="created" content="2019-02-26T17:43:27.409600050"/>
+	<meta name="changed" content="2019-03-27T16:32:43.086456621"/>
+	
+	<style type="text/css">
+		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Liberation Sans"; font-size:x-small }
+		a.comment-indicator:hover + comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em;  } 
+		a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em;  } 
+		comment { display:none;  } 
+	</style>
+	
+</head>
+
+<body>
+<table cellspacing="0" border="0">
+	<colgroup span="2" width="138"></colgroup>
+	<colgroup width="226"></colgroup>
+	<colgroup width="221"></colgroup>
+	<colgroup width="287"></colgroup>
+	<colgroup width="294"></colgroup>
+	<colgroup width="256"></colgroup>
+	<colgroup width="203"></colgroup>
+	<colgroup width="162"></colgroup>
+	<tr>
+		<td height="35" align="center" valign=middle><b>TEST SCENARIO</b></td>
+		<td align="center" valign=middle><b>MODULE NAME</b></td>
+		<td align="center" valign=middle><b>OBJECTIVE</b></td>
+		<td align="center" valign=middle><b>PRE-REQUISITE</b></td>
+		<td align="center" valign=middle><b>STEPS</b></td>
+		<td align="center" valign=middle><b>TEST DATA</b></td>
+		<td align="center" valign=middle><b>EXCEPTED RESULTS</b></td>
+		<td align="center" valign=middle><b>ACTUAL RESULTS</b></td>
+		<td align="center" valign=middle><b>STATUS PASS/FAIL</b></td>
+	</tr>
+	<tr>
+		<td height="73" align="center" valign=middle>TS_001</td>
+		<td align="center" valign=middle>Login credentials</td>
+		<td align="center" valign=middle>To check create account button functionality</td>
+		<td align="left" valign=middle>1. User email must in the database <br>2. User already entered sign up information</td>
+		<td align="left" valign=middle>1. Go to sign up page<br>2. Enter sign up information<br>3.Click on the Create account button</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/signup/">http://localhost:8080/signup/</a> <br>2. Email:<a href="mailto:yz@email.com">yz@email.com</a>;<br>Password:1234; <br>Confirm password:1234          </td>
+		<td align="left" valign=middle>Show up the sign up successful page</td>
+		<td align="center" valign=middle>Showed sign up successful page</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="74" align="center" valign=middle>TS_002</td>
+		<td align="center" valign=middle>Login credentials</td>
+		<td align="center" valign=middle>To check sign up functionality with invalid email </td>
+		<td align="left" valign=middle><br></td>
+		<td align="left" valign=middle>1. Go to sign up page<br>2. Enter sign up information<br>3.Click on the Create account button</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/signup/">http://localhost:8080/signup/</a> <br>2. Email:yyyyyyz@gggmail.com;<br>Password:1234; <br>Confirm password:1234          </td>
+		<td align="left" valign=middle>1. User should be on sign up page         2. User should be able to see a error message </td>
+		<td align="center" valign=middle>Sign up page showed   a error message</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="70" align="center" valign=middle>TS_003</td>
+		<td align="center" valign=middle>Login credentials</td>
+		<td align="center" valign=middle>To check sign up functionality with password not match</td>
+		<td align="left" valign=middle>User email must in the database</td>
+		<td align="left" valign=middle>1. Go to sign up page<br>2. Enter different password</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/signup/">http://localhost:8080/signup/</a> <br>2. Email:<a href="mailto:yz@email.com">yz@email.com</a>; <br>Password:1234; <br>Confirm password:12345678</td>
+		<td align="left" valign=middle>1. User should be on sign up page         2. User should be able to see a error message </td>
+		<td align="center" valign=middle>Sign up page showed   a error message</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="71" align="center" valign=middle>TS_004</td>
+		<td align="center" valign=middle>Login credentials</td>
+		<td align="center" valign=middle>To check the hyperlink in sign up page can go back to login page</td>
+		<td align="left" valign=middle><br></td>
+		<td align="left" valign=middle>1. Go to sign up page <br>2. Click on the hyperlink         </td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/signup/">http://localhost:8080/signup/</a> </td>
+		<td align="left" valign=middle>Go back to the login page</td>
+		<td align="center" valign=middle>User is able to go back to log in page</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="79" align="center" valign=middle>TS_005</td>
+		<td align="center" valign=middle>Login credentials</td>
+		<td align="center" valign=middle>To check the hyperlink in sign up success page can go back to login page</td>
+		<td align="left" valign=middle>Successfully signed up</td>
+		<td align="left" valign=middle>1. Go to sign up page <br>2. Enter sign up information<br>3. Click on the Create account button<br>4. Click on the log in hyperlink</td>
+		<td align="left" valign=middle>1.http://localhost:8080/signup/ <br>2. Email:yz@email.com;  Password:1234;<br>Confirm password:1234<br>3. http://localhost:8080/signup/signupsuccess/          </td>
+		<td align="left" valign=middle>Go to the login page</td>
+		<td align="center" valign=middle>User is able to go back to log in page</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="74" align="center" valign=middle>TS_006</td>
+		<td align="center" valign=middle>Login credentials</td>
+		<td align="center" valign=middle>To check log in button functionality</td>
+		<td align="left" valign=middle>User already signed up</td>
+		<td align="left" valign=middle>1. Go to log in page<br>2. Enter log in information<br>3.Click on the Log In button</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/">http://localhost:8080/</a></td>
+		<td align="left" valign=middle>Show up the worksheets for user</td>
+		<td align="center" valign=middle>Worksheet is shown with correct email and password</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="73" align="center" valign=middle>TS_007</td>
+		<td align="center" valign=middle>Login credentials</td>
+		<td align="center" valign=middle>To check log in functionality with invalid email</td>
+		<td align="left" valign=middle><br></td>
+		<td align="left" valign=middle>1. Go to log in page<br>2. Enter log in information<br>3.Click on the Log In button</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/">http://localhost:8080/</a><br>2.Email:yz@eeeemail.com;  <br>Password:1234;</td>
+		<td align="left" valign=middle>User should be able to see a error message </td>
+		<td align="center" valign=middle>Log in page showed a error message with invalid email</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="74" align="center" valign=middle>TS_008</td>
+		<td align="center" valign=middle>Login credentials</td>
+		<td align="center" valign=middle>To check log in functionality with invalid password</td>
+		<td align="left" valign=middle>User already sign up</td>
+		<td align="left" valign=middle>1. Go to log in page<br>2. Enter incorrect password<br>3.Click on the Log In button</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/">http://localhost:8080/</a><br>2.Email:yz@email.com;  <br>Password:12345678;</td>
+		<td align="left" valign=middle>User should be able to see a error message </td>
+		<td align="center" valign=middle>Log in page showed a error message with incorrect message</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="73" align="center" valign=middle>TS_009</td>
+		<td align="center" valign=middle>Login credentials</td>
+		<td align="center" valign=middle>To check the hyperlink in log in page can go to sign up page</td>
+		<td align="left" valign=middle><br></td>
+		<td align="left" valign=middle>1. Go to log in page<br>2. Click on the hyperlink</td>
+		<td align="left" valign=middle>1.http://localhost:8080/</td>
+		<td align="left" valign=middle>Go to the sign up page</td>
+		<td align="center" valign=middle>User is able to go to sign up page</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="68" align="center" valign=middle>TS_010</td>
+		<td align="center" valign=middle>Admin Account</td>
+		<td align="center" valign=middle>To check Add button functionality</td>
+		<td align="left" valign=middle><br></td>
+		<td align="left" valign=middle>1. Go to admin page<br>2.Add email in the textbox<br>3. Click on the Add button</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/adminpage/">http://localhost:8080/adminpage/</a><br>2.type ‘<a href="mailto:yz@email.com">yz@email.com</a>’</td>
+		<td align="left" valign=middle>1.Go to the Admin done page<br><br>2.All the emails added to database</td>
+		<td align="center" valign=middle>User is able to go  to admin done page</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="70" align="center" valign=middle>TS_011</td>
+		<td align="center" valign=middle>Admin Account</td>
+		<td align="center" valign=middle>To check go back to main page button</td>
+		<td align="left" valign=middle>Email should be successful added in the database</td>
+		<td align="left" valign=middle>1. Go to admin page<br>2.Add email in the textbox<br>3. Click on the Add button<br>4.Click on the go back to main page button</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/adminpage/">http://localhost:8080/adminpage/</a><br>2.type ‘<a href="mailto:yz@email.com">yz@email.com</a>’<br>3.<a href="http://localhost:8080/adminpage/">http://localhost:8080/adminpage/</a>admindone/</td>
+		<td align="left" valign=middle>1. Go back to the log in page</td>
+		<td align="center" valign=middle>Admin done page is blank</td>
+		<td align="center" valign=middle bgcolor="#FFFBCC">FAIL(fixed)</td>
+	</tr>
+	<tr>
+		<td height="69" align="center" valign=middle>TS_012</td>
+		<td align="center" valign=middle>Admin Account</td>
+		<td align="center" valign=middle>To check log out button at right-top functionality</td>
+		<td align="left" valign=middle>User already logged in </td>
+		<td align="left" valign=middle>1. Go to admin page <br>2. Click on the log out button</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/adminpage/">http://localhost:8080/adminpage/</a></td>
+		<td align="left" valign=middle>1.Go to log in page <br></td>
+		<td align="center" valign=middle>Went to log in page</td>
+		<td align="center" valign=middle bgcolor="#FFFBCC"><font color="#000000">FAIL(fixed)</font></td>
+	</tr>
+	<tr>
+		<td height="67" align="center" valign=middle>TS_013</td>
+		<td align="center" valign=middle>Admin Account</td>
+		<td align="center" valign=middle>To check the text-area is not empty </td>
+		<td align="left" valign=middle><br></td>
+		<td align="left" valign=middle>1. Go to admin page <br>2. type nothing in the area</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/adminpage/">http://localhost:8080/adminpage/</a><br>2.No input</td>
+		<td align="left" valign=middle>User should be able to see a error message </td>
+		<td align="center" valign=middle>No error message shown</td>
+		<td align="center" valign=middle bgcolor="#FFFBCC"><font color="#000000">FAIL(fixed)</font></td>
+	</tr>
+	<tr>
+		<td height="59" align="center" valign=middle>TS_014</td>
+		<td align="center" valign=middle>Admin Account</td>
+		<td align="center" valign=middle>To check if the format of email matches the requirement or not</td>
+		<td align="center" valign=middle>Format of email should be ‘…@email.com’</td>
+		<td align="left" valign=middle>1. Go to admin page <br>2. type other format email in the area</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/adminpage/">http://localhost:8080/adminpage/</a><br>2.Type ‘<a href="mailto:yz@student.le.ac.uk">yz@student.le.ac.uk</a>’</td>
+		<td align="left" valign=middle>User should be able to see a error message </td>
+		<td align="center" valign=middle>No error message shown</td>
+		<td align="center" valign=middle bgcolor="#FFFBCC"><font color="#000000">FAIL(fixed)</font></td>
+	</tr>
+	<tr>
+		<td height="59" align="center" valign=middle>TS_015</td>
+		<td align="center" valign=middle>View Timesheets</td>
+		<td align="center" valign=middle>To check employee can choose their working time</td>
+		<td align="left" valign=middle><br></td>
+		<td align="left" valign=middle>1. Log in to Timesheets page<br>2.click on the cells in table to choose the working time/break time</td>
+		<td align="left" valign=middle>1http://localhost:8080/loginaccount(Need to log in)</td>
+		<td align="left" valign=middle>User should be able to click the cells and cells change the statement.</td>
+		<td align="center" valign=middle>User is able to click cells to choose statement</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="59" align="center" valign=middle>TS_016</td>
+		<td align="center" valign=middle>Line-manager view</td>
+		<td align="center" valign=middle>To check if  manager  can accept employee’s timesheets</td>
+		<td align="left" valign=middle>Employees already submitted timesheets</td>
+		<td align="left" valign=middle>1Manager log in to manager page<br>2.Click accept button </td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/managerpage/">http://localhost:8080/managerpage/</a>(Need to log in)<br></td>
+		<td align="left" valign=middle>The name of the timesheet owner should be shown below accepted list</td>
+		<td align="center" valign=middle>Employee’s name shown under accepted list</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="60" align="center" valign=middle>TS_017</td>
+		<td align="center" valign=middle>Line-manager view</td>
+		<td align="center" valign=middle>To check if  manager  can reject employee’s timesheets</td>
+		<td align="left" valign=middle>Employees already submitted timesheets</td>
+		<td align="left" valign=middle>1Manager log in to manager page<br>2.Click reject button </td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/managerpage/">http://localhost:8080/managerpage/</a>(Need to log in)<br></td>
+		<td align="left" valign=middle>The name of the timesheet owner should be shown below rejected list</td>
+		<td align="center" valign=middle>Employee’s name shown under rejected list</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="59" align="center" valign=middle>TS_018</td>
+		<td align="center" valign=middle>default hours</td>
+		<td align="center" valign=middle>To check if users can see the default working time</td>
+		<td align="left" valign=middle>User should already logged in to timesheets page or manager page</td>
+		<td align="left" valign=middle>1. Log in to timesheets page</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/timesheetspage">http://localhost:8080/timesheetspage</a></td>
+		<td align="left" valign=middle>User should be able to see the default hours</td>
+		<td align="center" valign=middle>Background for the default hours in timesheets is blue</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="61" align="center" valign=middle>TS_019</td>
+		<td align="center" valign=middle>Contracted hours &amp; overtime</td>
+		<td align="center" valign=middle>To check if users can see the contracted hours &amp; overtime hours</td>
+		<td align="left" valign=middle>User should already logged in to timesheets page or manager page</td>
+		<td align="left" valign=middle>1. Log in to timesheets page or Manager page</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/timesheetspage">http://localhost:8080/timesheetspage</a></td>
+		<td align="left" valign=middle>User should be able to see thecontracted hours and overtime</td>
+		<td align="center" valign=middle>There is a colour list at the right hand side which stands for different meanings</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4"><font color="#000000">PASS</font></td>
+	</tr>
+	<tr>
+		<td height="60" align="center" valign=middle>TS_020</td>
+		<td align="center" valign=middle>approve/reject timesheets</td>
+		<td align="center" valign=middle>To check if  manager  can accept employee’s timesheets</td>
+		<td align="left" valign=middle>Employees already submitted timesheets</td>
+		<td align="left" valign=middle>1Manager log in to manager page<br>2.Click accept button </td>
+		<td align="left" valign=middle>1http://localhost:8080/managerpage/(Need to log in)</td>
+		<td align="left" valign=middle>The name of the timesheet owner should be shown below accepted list with date</td>
+		<td align="center" valign=middle>Employee’s name shown under accepted list with date</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="64" align="center" valign=middle>TS_021</td>
+		<td align="center" valign=middle>approve/reject timesheets</td>
+		<td align="center" valign=middle>To check if  manager  can reject employee’s timesheets with reason</td>
+		<td align="left" valign=middle>Employees already submitted timesheets</td>
+		<td align="left" valign=middle>1Manager log in to manager page<br>2.Click reject button </td>
+		<td align="left" valign=middle>1http://localhost:8080/managerpage/(Need to log in)</td>
+		<td align="left" valign=middle>The name of the timesheet owner should be shown below rejected list with date and reason</td>
+		<td align="center" valign=middle>Employee’s name shown under accepted list with date,alert for reason</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="60" align="center" valign=middle>TS_022</td>
+		<td align="center" valign=middle>Admin main page</td>
+		<td align="center" valign=middle>To check if Admin can add email by roles</td>
+		<td align="left" valign=middle><br></td>
+		<td align="left" valign=middle>1.Admin go to admin page<br></td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/adminmain/">http://localhost:8080/adminmain/</a></td>
+		<td align="left" valign=middle>Admin is able to add emails by role(admin,manager,employee)</td>
+		<td align="left" valign=middle>Admin is able to add emails by role(admin,manager,employee)</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+	<tr>
+		<td height="61" align="center" valign=middle>TS_023</td>
+		<td align="center" valign=middle>Time zone</td>
+		<td align="center" valign=middle>To check date(time) can be changed by time zone</td>
+		<td align="left" valign=middle><br></td>
+		<td align="left" valign=middle>1Manager log in to manager page<br>2.Select time zone in personal information list</td>
+		<td align="left" valign=middle>1.<a href="http://localhost:8080/managerpage/">http://localhost:8080/managerpage/</a>(Need to log in)<br></td>
+		<td align="left" valign=middle>Manager is able to select time zone</td>
+		<td align="left" valign=middle>Manager is able to select time <br>Zone</td>
+		<td align="center" valign=middle bgcolor="#E0EFD4">PASS</td>
+	</tr>
+</table>
+<!-- ************************************************************************** -->
+</body>
+
+</html>
